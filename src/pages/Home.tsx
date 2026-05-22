@@ -33,9 +33,9 @@ const techBadges = [
 const featuredProjects = [
   {
     icon: Brain,
-    title: 'NeuralChat Pro',
-    desc: 'Enterprise-grade LLM platform with RAG pipeline, multi-modal support, and real-time analytics dashboard.',
-    tags: ['Python', 'LangChain', 'OpenAI', 'FastAPI'],
+    title: 'QueryMind: Natural Language to SQL Engine',
+    desc: 'Experimented with fine-tuning a LLaMA 3.2 3B model to explore Natural Language to SQL (NL2SQL) translation. Set up an asynchronous backend using FastAPI and Uvicorn to process user inputs and handle model inferences. Built an interactive web interface using Gradio and successfully deployed the application to HuggingFace Spaces for testing. Integrated OpenAI and Groq APIs to compare generated SQL queries and evaluate the model\'s performance.',
+    tags: ['Python', 'PyTorch', 'HuggingFace', 'FastAPI', 'Gradio'],
     gradient: 'from-indigo-500/20 to-violet-500/20',
     accent: 'border-indigo-500/30',
     lightAccent: 'border-indigo-200',
@@ -118,7 +118,7 @@ export default function Home() {
 
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-4">
                 <span className={isDark ? 'text-white' : 'text-slate-900'}>Hi, I'm{' '}</span>
-                <span className="gradient-text glow-text">Alex Morgan</span>
+                <span className="gradient-text glow-text">Lakshitha Wijekoon</span>
               </h1>
 
               <h2 className="text-2xl lg:text-3xl font-bold mb-6 h-10">
@@ -222,20 +222,13 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Profile image placeholder */}
+                  {/* Profile image */}
                   <div className={`absolute inset-[30px] rounded-full overflow-hidden border-2 border-indigo-500/40 shadow-2xl shadow-indigo-500/20 float-anim`}>
-                    <div className="w-full h-full bg-gradient-to-br from-indigo-900 via-slate-800 to-sky-900 flex flex-col items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-sky-500/20" />
-                      <div className="absolute top-4 left-4 w-16 h-16 bg-indigo-500/30 rounded-full blur-2xl" />
-                      <div className="absolute bottom-4 right-4 w-20 h-20 bg-sky-500/30 rounded-full blur-2xl" />
-                      <div className="relative z-10 flex flex-col items-center">
-                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-400/60 to-sky-400/60 border-2 border-white/20 mb-2 flex items-center justify-center">
-                          <span className="text-4xl font-black text-white/80">AM</span>
-                        </div>
-                        <div className="w-40 h-12 rounded-t-full bg-gradient-to-br from-indigo-400/40 to-sky-400/40 mt-1" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#080b14]/60 to-transparent" />
-                    </div>
+                    <img 
+                      src="/my-photo.png" 
+                      alt="Lakshitha Wijekoon" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
                   {/* Status badge */}
