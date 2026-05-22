@@ -1,16 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ExternalLink, Github, Brain, Code2, Layers, Zap, Database, Globe, Bot, BarChart2 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
-const categories = ['All', 'AI / ML', 'Full-Stack', 'Research', 'Open Source'];
+const categories = ['All', 'AI / ML', 'Full-Stack', 'Mobile', 'Research', 'Open Source'];
 
 const projects = [
   {
     icon: Brain,
-    title: 'NeuralChat Pro',
+    title: 'QueryMind',
     category: 'AI / ML',
-    desc: 'Enterprise-grade conversational AI platform with RAG pipeline, multi-modal support, custom fine-tuning, and real-time analytics dashboard serving 500K+ users.',
-    tags: ['Python', 'LangChain', 'OpenAI GPT-4', 'FastAPI', 'PostgreSQL', 'Redis'],
+    desc: 'Experimented with fine-tuning a LLaMA 3.2 3B model to explore Natural Language to SQL (NL2SQL) translation.',
+    tags: ['Python', 'PyTorch', 'HuggingFace', 'FastAPI', 'Gradio'],
     gradient: 'from-indigo-500/20 to-violet-500/10',
     lightGradient: 'from-indigo-50 to-violet-50',
     accent: 'border-indigo-500/30',
@@ -20,7 +20,7 @@ const projects = [
     lightIconBg: 'bg-indigo-100 border-indigo-200',
     featured: true,
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/LakshithaNuwan722/querymind-nl2sql.git',
     stats: ['500K+ Users', '99.9% Uptime', '3s Avg Response'],
   },
   {
@@ -43,10 +43,10 @@ const projects = [
   },
   {
     icon: Bot,
-    title: 'AutoCode Agent',
+    title: 'Sri Lankan Legal AI Assistant',
     category: 'AI / ML',
-    desc: 'AI-powered coding assistant that generates, reviews, debugs, and refactors code using multi-agent workflows with tool use.',
-    tags: ['GPT-4', 'ReAct Agents', 'TypeScript', 'Node.js', 'Docker'],
+    desc: 'Developing a domain-specific AI assistant by exploring how to apply the Mistral 7B Large Language Model to Sri Lankan legal texts.',
+    tags: ['Python', 'PyTorch', 'HuggingFace', 'FastAPI', 'Gradio'],
     gradient: 'from-violet-500/20 to-pink-500/10',
     lightGradient: 'from-violet-50 to-pink-50',
     accent: 'border-violet-500/30',
@@ -56,7 +56,7 @@ const projects = [
     lightIconBg: 'bg-violet-100 border-violet-200',
     featured: true,
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/LakshithaNuwan722/sl-legal-ai-assistant.git',
     stats: ['10K+ Devs', '85% Time Save', '20+ Languages'],
   },
   {
@@ -79,10 +79,10 @@ const projects = [
   },
   {
     icon: Globe,
-    title: 'SaaS Launchpad',
+    title: 'Touraa',
     category: 'Full-Stack',
-    desc: 'Production-ready SaaS boilerplate with auth, billing, multi-tenancy, admin panel, and CI/CD pipelines — launch in hours.',
-    tags: ['Next.js 14', 'Stripe', 'Prisma', 'Supabase', 'TailwindCSS'],
+    desc: 'Developed a full-stack vehicle rental management system using React for the frontend and FastAPI for the backend',
+    tags: ['React','React Router', 'FastAPI', 'TailwindCSS','Google API'],
     gradient: 'from-orange-500/20 to-amber-500/10',
     lightGradient: 'from-orange-50 to-amber-50',
     accent: 'border-orange-500/30',
@@ -92,8 +92,42 @@ const projects = [
     lightIconBg: 'bg-orange-100 border-orange-200',
     featured: false,
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/LakshithaNuwan722/Touraa.git',
     stats: ['500+ Stars', '50+ Forks', 'MIT License'],
+    imageUrls: [
+      '/touraa-ui/Screenshot 2026-05-07 183850.png',
+      '/touraa-ui/Screenshot 2026-05-07 190435.png',
+      '/touraa-ui/Screenshot 2026-05-07 214558.png',
+      '/touraa-ui/Screenshot 2026-05-07 224442.png',
+      '/touraa-ui/Screenshot 2026-05-07 230736.png',
+      '/touraa-ui/Screenshot 2026-05-07 231523.png',
+    ],
+  },
+  {
+    icon: Layers,
+    title: 'e-Passport Issuing System',
+    category: 'Full-Stack',
+    desc: 'A comprehensive Java-based application designed to automate and streamline the process of passport issuance, management, and tracking. ',
+    tags: ['Java', 'HTML', 'mysql', 'CSS'],
+    gradient: 'from-blue-500/20 to-cyan-500/10',
+    lightGradient: 'from-blue-50 to-cyan-50',
+    accent: 'border-blue-500/30',
+    lightAccent: 'border-blue-200',
+    iconColor: 'text-blue-500',
+    iconBg: 'bg-blue-500/15 border-blue-500/25',
+    lightIconBg: 'bg-blue-100 border-blue-200',
+    featured: false,
+    liveUrl: '#',
+    githubUrl: 'https://github.com/LakshithaNuwan722/Passport-Issuing-System.git',
+    stats: ['Secure', 'Fast', 'Scalable'],
+    imageUrls: [
+      '/e-passport-ui/Screenshot 2026-01-11 002836.png',
+      '/e-passport-ui/Screenshot 2026-01-20 084225.png',
+      '/e-passport-ui/Screenshot 2026-01-20 091755.png',
+      '/e-passport-ui/Screenshot 2026-01-20 091820.png',
+      '/e-passport-ui/Screenshot 2026-01-20 091837.png',
+      '/e-passport-ui/Screenshot 2026-01-20 092533.png',
+    ],
   },
   {
     icon: Database,
@@ -150,6 +184,33 @@ const projects = [
     stats: ['800+ Stars', '10x Faster', 'Edge Ready'],
   },
 ];
+
+function ProjectImageSlider({ imageUrls, title }: { imageUrls: string[], title: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (imageUrls.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % imageUrls.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [imageUrls.length]);
+
+  return (
+    <div className="w-full h-full relative group overflow-hidden">
+      {imageUrls.map((url, index) => (
+        <img
+          key={url}
+          src={url}
+          alt={`${title} screenshot ${index + 1}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 ${
+            index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -217,11 +278,24 @@ export default function Projects() {
                       <span className="text-yellow-500 text-xs font-medium">Featured</span>
                     </div>
 
-                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-4 ${
-                      isDark ? project.iconBg : project.lightIconBg
-                    }`}>
-                      <Icon size={22} className={project.iconColor} />
-                    </div>
+                    {/* @ts-ignore - allow dynamic imageUrl property */}
+                    {project.imageUrls ? (
+                      <div className="w-full h-48 mb-4 rounded-xl overflow-hidden border border-white/10">
+                        {/* @ts-ignore */}
+                        <ProjectImageSlider imageUrls={project.imageUrls} title={project.title} />
+                      </div>
+                    ) : (project as any).imageUrl ? (
+                      <div className="w-full h-48 mb-4 rounded-xl overflow-hidden border border-white/10">
+                        {/* @ts-ignore */}
+                        <img src={(project as any).imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      </div>
+                    ) : (
+                      <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-4 ${
+                        isDark ? project.iconBg : project.lightIconBg
+                      }`}>
+                        <Icon size={22} className={project.iconColor} />
+                      </div>
+                    )}
 
                     <div className="mb-1">
                       <span className={`text-xs mono ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{project.category}</span>
@@ -295,11 +369,24 @@ export default function Projects() {
                         : `${project.lightAccent} bg-white shadow-sm`
                     }`}
                   >
-                    <div className={`w-10 h-10 rounded-xl border flex items-center justify-center mb-3 ${
-                      isDark ? project.iconBg : project.lightIconBg
-                    }`}>
-                      <Icon size={18} className={project.iconColor} />
-                    </div>
+                    {/* @ts-ignore - allow dynamic imageUrl property */}
+                    {project.imageUrls ? (
+                      <div className="w-full h-32 mb-3 rounded-xl overflow-hidden border border-white/10">
+                        {/* @ts-ignore */}
+                        <ProjectImageSlider imageUrls={project.imageUrls} title={project.title} />
+                      </div>
+                    ) : (project as any).imageUrl ? (
+                      <div className="w-full h-32 mb-3 rounded-xl overflow-hidden border border-white/10">
+                        {/* @ts-ignore */}
+                        <img src={(project as any).imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      </div>
+                    ) : (
+                      <div className={`w-10 h-10 rounded-xl border flex items-center justify-center mb-3 ${
+                        isDark ? project.iconBg : project.lightIconBg
+                      }`}>
+                        <Icon size={18} className={project.iconColor} />
+                      </div>
+                    )}
                     <span className={`text-xs mono mb-1 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{project.category}</span>
                     <h3 className={`font-bold text-base mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>{project.title}</h3>
                     <p className={`text-xs leading-relaxed mb-3 flex-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{project.desc}</p>
