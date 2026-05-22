@@ -5,7 +5,7 @@ const socials = [
   { icon: Github, href: '#', label: 'GitHub' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
   { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:alex@example.com', label: 'Email' },
+  { icon: Mail, href: 'mailto:lakshithanuwan722@gmail.com', label: 'Email' },
 ];
 
 export default function Footer() {
@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
             <div>
               <span className={`font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                Alex<span className="gradient-text">Morgan</span>
+                Lakshitha<span className="gradient-text">Wijekoon</span>
               </span>
               <p className={`text-[10px] mono ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>AI & Software Developer</p>
             </div>
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className={`text-sm flex items-center gap-1 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>
-            Built with <Heart size={12} className="text-red-400 inline" /> © {new Date().getFullYear()} Alex Morgan
+            Built with <Heart size={12} className="text-red-400 inline" /> © {new Date().getFullYear()} Lakshitha Wijekoon
           </p>
         </div>
       </div>

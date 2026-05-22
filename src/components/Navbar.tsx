@@ -46,7 +46,7 @@ export default function Navbar() {
             </div>
             <div>
               <span className={`font-bold text-lg tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                Alex<span className="gradient-text">Morgan</span>
+                Lakshitha<span className="gradient-text">Wijekoon</span>
               </span>
               <p className={`text-[10px] mono -mt-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>
                 AI & Software Developer
