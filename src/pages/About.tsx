@@ -70,7 +70,7 @@ export default function About() {
               The Story <span className="gradient-text">Behind</span> the Code
             </h1>
             <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-              I'm <strong className={isDark ? 'text-white' : 'text-slate-900'}>Alex Morgan</strong>, an AI & Software Developer with 5+ years of experience
+              I'm <strong className={isDark ? 'text-white' : 'text-slate-900'}>Lakshitha Wijekoon</strong>, an AI & Software Developer with 5+ years of experience
               building intelligent systems that solve real-world problems. My journey started with a deep curiosity
               for how machines learn, and it's evolved into a career at the intersection of cutting-edge AI research
               and production-grade software engineering.
@@ -127,7 +127,7 @@ export default function About() {
                     <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-indigo-400/60 to-sky-400/60 border-2 border-white/20 mb-3 flex items-center justify-center">
                       <span className="text-5xl font-black text-white/80">AM</span>
                     </div>
-                    <p className="text-white font-bold text-lg">Alex Morgan</p>
+                    <p className="text-white font-bold text-lg">Lakshitha Wijekoon</p>
                     <p className="text-indigo-400 text-sm mono">AI & Software Developer</p>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#080b14]/40 to-transparent" />
