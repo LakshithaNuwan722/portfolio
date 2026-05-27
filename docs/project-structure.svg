@@ -1,0 +1,62 @@
+<svg width="900" height="680" viewBox="0 0 900 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="card" x1="95" y1="80" x2="805" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0.96"/>
+    </linearGradient>
+    <filter id="shadow" x="60" y="50" width="780" height="590" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <style>
+      .title { font-family: Inter, Segoe UI, Arial, sans-serif; font-size: 30px; font-weight: 800; fill: #F8FAFC; }
+      .subtitle { font-family: Inter, Segoe UI, Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #94A3B8; }
+      .tree { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 18px; fill: #CBD5E1; }
+      .folder { fill: #60A5FA; font-weight: 700; }
+      .file { fill: #E2E8F0; }
+      .comment { fill: #94A3B8; font-size: 15px; }
+      .root { fill: #A78BFA; font-weight: 800; }
+      .accent { fill: #22D3EE; }
+    </style>
+  </defs>
+
+  <rect width="900" height="680" rx="32" fill="url(#bg)"/>
+  <circle cx="130" cy="90" r="90" fill="#2563EB" opacity="0.18"/>
+  <circle cx="780" cy="585" r="120" fill="#7C3AED" opacity="0.22"/>
+  <circle cx="720" cy="105" r="75" fill="#06B6D4" opacity="0.12"/>
+
+  <rect x="90" y="70" width="720" height="540" rx="24" fill="url(#card)" filter="url(#shadow)" stroke="#334155"/>
+
+  <rect x="90" y="70" width="720" height="72" rx="24" fill="#020617" opacity="0.72"/>
+  <circle cx="126" cy="106" r="8" fill="#EF4444"/>
+  <circle cx="154" cy="106" r="8" fill="#F59E0B"/>
+  <circle cx="182" cy="106" r="8" fill="#22C55E"/>
+
+  <text x="220" y="103" class="title">Portfolio Project Structure</text>
+  <text x="220" y="126" class="subtitle">React • TypeScript • Vite • Tailwind CSS</text>
+
+  <g transform="translate(130, 178)">
+    <text class="tree" x="0" y="0"><tspan class="root">portfolio/</tspan></text>
+    <text class="tree" x="0" y="36">├── <tspan class="folder">public/</tspan></text>
+    <text class="tree" x="0" y="72">│   └── <tspan class="file">vite.svg</tspan></text>
+    <text class="tree" x="0" y="108">├── <tspan class="folder">src/</tspan></text>
+    <text class="tree" x="0" y="144">│   ├── <tspan class="folder">assets/</tspan> <tspan class="comment"># Images, icons, and static assets</tspan></text>
+    <text class="tree" x="0" y="180">│   ├── <tspan class="folder">components/</tspan> <tspan class="comment"># Reusable UI components</tspan></text>
+    <text class="tree" x="0" y="216">│   ├── <tspan class="folder">pages/</tspan> <tspan class="comment"># Portfolio pages and sections</tspan></text>
+    <text class="tree" x="0" y="252">│   ├── <tspan class="file">App.tsx</tspan> <tspan class="comment"># Main app component</tspan></text>
+    <text class="tree" x="0" y="288">│   ├── <tspan class="file">main.tsx</tspan> <tspan class="comment"># Application entry point</tspan></text>
+    <text class="tree" x="0" y="324">│   └── <tspan class="file">index.css</tspan> <tspan class="comment"># Global styles</tspan></text>
+    <text class="tree" x="0" y="360">├── <tspan class="file">index.html</tspan></text>
+    <text class="tree" x="0" y="396">├── <tspan class="file">package.json</tspan></text>
+    <text class="tree" x="0" y="432">├── <tspan class="file">vite.config.ts</tspan></text>
+    <text class="tree" x="0" y="468">├── <tspan class="file">tailwind.config.ts</tspan></text>
+    <text class="tree" x="0" y="504">└── <tspan class="file">README.md</tspan></text>
+  </g>
+
+  <rect x="594" y="555" width="172" height="32" rx="16" fill="#0F172A" stroke="#334155"/>
+  <text x="612" y="577" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#22D3EE">LakshithaNuwan722</text>
+</svg>
