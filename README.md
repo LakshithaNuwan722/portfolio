@@ -1,73 +1,112 @@
-# React + TypeScript + Vite
+# Lakshitha Nuwan's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and highly interactive personal portfolio website showcasing my projects, skills, and experience in **Full-Stack Development**, **Mobile App Development**, and **AI/ML Engineering**.
 
-Currently, two official plugins are available:
+Built with **React**, **TypeScript**, **Vite**, and styled using **Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+View the live portfolio here:
 
-## Expanding the ESLint configuration
+🔗 [Lakshitha Nuwan Portfolio](https://LakshithaNuwan722.github.io/portfolio)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Frontend Framework:** React 19
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Routing:** React Router DOM
+- **Deployment:** GitHub Pages
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ✨ Features
+
+- 🎨 **Modern UI/UX**  
+  Clean, sleek, and interactive design with smooth transitions and animations.
+
+- 🌗 **Dark/Light Mode**  
+  Supports both dark and light themes for a better user experience.
+
+- 📱 **Fully Responsive Design**  
+  Optimized for desktop, tablet, and mobile devices.
+
+- 🚀 **Project Showcase**  
+  Displays projects across multiple domains, including:
+
+  **AI / ML Projects**
+  - QueryMind
+  - VisionAI Studio
+  - Sri Lankan Legal AI Assistant
+
+  **Full-Stack Projects**
+  - Touraa
+  - e-Passport Issuing System
+  - LuxeSalon
+
+  **Mobile App Projects**
+  - FitSmart
+  - CeylonTrail
+
+- ⚡ **Fast Performance**  
+  Powered by Vite for quick development and optimized production builds.
+
+---
+
+## 📁 Project Structure
+
+<img src="./docs/project-structure.svg" alt="Portfolio Project Structure" width="850" />
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **GitHub Pages**.
+
+Live URL:
+
+```txt
+https://LakshithaNuwan722.github.io/portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+If deploying with Vite to GitHub Pages, make sure your `vite.config.ts` includes:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```ts
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+export default defineConfig({
+  plugins: [react()],
+  base: "/portfolio/",
+});
 ```
+
+---
+
+## 🤝 Contact
+
+**Lakshitha Nuwan**
+
+- GitHub: [LakshithaNuwan722](https://github.com/LakshithaNuwan722)
+- Portfolio: [Live Website](https://LakshithaNuwan722.github.io/portfolio)
+
+---
+
+## 🔗 Project Link
+
+GitHub Repository:
+
+[https://github.com/LakshithaNuwan722/portfolio](https://github.com/LakshithaNuwan722/portfolio)
+
+---
+
+## ⭐ Support
+
+If you like this project, feel free to give it a star on GitHub!
