@@ -9,8 +9,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'alex@alexmorgan.dev',
-    href: 'mailto:alex@alexmorgan.dev',
+    value: 'LakshithaDev',
+    href: 'mailto:LakshithaDevv@outlook.com',
     color: 'text-indigo-400',
     bg: 'bg-indigo-500/10 border-indigo-500/25',
     lightBg: 'bg-indigo-50 border-indigo-200',
@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (555) 012-3456',
-    href: 'tel:+15550123456',
+    value: '+94 (769) 369-728',
+    href: 'tel:+94769369728',
     color: 'text-sky-400',
     bg: 'bg-sky-500/10 border-sky-500/25',
     lightBg: 'bg-sky-50 border-sky-200',
@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'San Francisco, CA (Remote OK)',
+    value: 'Colombo, Sri Lanka (Remote OK)',
     href: '#',
     color: 'text-violet-400',
     bg: 'bg-violet-500/10 border-violet-500/25',
@@ -45,9 +45,11 @@ const contactInfo = [
 ];
 
 const socials = [
-  { icon: Github, href: '#', label: 'GitHub', handle: '@alexmorgan-ai' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn', handle: 'in/alexmorgan' },
-  { icon: Twitter, href: '#', label: 'Twitter / X', handle: '@alex_ai_dev' },
+  {
+    icon: Github, href: 'https://github.com/LakshithaNuwan722', label: 'GitHub', handle: '@LakshithaDev'
+  },
+  { icon: Linkedin, href: 'www.linkedin.com/in/lakshitha-wijekoon-612b70357', label: 'LinkedIn', handle: 'in/Lakshitha Wijekoon' },
+  { icon: Twitter, href: '#', label: 'Twitter / X', handle: '@LakshithaDev' },
 ];
 
 const services = [
@@ -113,13 +115,11 @@ export default function Contact() {
                 <a
                   key={label}
                   href={href}
-                  className={`card-hover flex items-center gap-4 rounded-2xl border p-5 group transition-colors duration-300 ${
-                    isDark ? bg : lightBg
-                  }`}
+                  className={`card-hover flex items-center gap-4 rounded-2xl border p-5 group transition-colors duration-300 ${isDark ? bg : lightBg
+                    }`}
                 >
-                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center flex-shrink-0 ${
-                    isDark ? bg : lightBg
-                  }`}>
+                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center flex-shrink-0 ${isDark ? bg : lightBg
+                    }`}>
                     <Icon size={18} className={color} />
                   </div>
                   <div>
@@ -141,17 +141,15 @@ export default function Contact() {
                   <a
                     key={label}
                     href={href}
-                    className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 group ${
-                      isDark
+                    className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 group ${isDark
                         ? 'bg-white/5 border-white/8 hover:bg-white/10 hover:border-indigo-500/30'
                         : 'bg-white border-slate-200 hover:bg-indigo-50 hover:border-indigo-200 shadow-sm'
-                    }`}
+                      }`}
                   >
-                    <div className={`w-9 h-9 rounded-xl border flex items-center justify-center transition-all ${
-                      isDark
+                    <div className={`w-9 h-9 rounded-xl border flex items-center justify-center transition-all ${isDark
                         ? 'bg-white/8 border-white/10 group-hover:bg-indigo-500/20 group-hover:border-indigo-500/30'
                         : 'bg-slate-100 border-slate-200 group-hover:bg-indigo-100 group-hover:border-indigo-200'
-                    }`}>
+                      }`}>
                       <Icon size={16} className={`transition-colors ${isDark ? 'text-slate-400 group-hover:text-indigo-400' : 'text-slate-500 group-hover:text-indigo-500'}`} />
                     </div>
                     <div className="flex-1">
@@ -193,11 +191,10 @@ export default function Contact() {
                   <p className={`mb-6 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Thanks for reaching out! I'll get back to you within 24 hours.</p>
                   <button
                     onClick={() => { setSent(false); setForm({ name: '', email: '', subject: '', message: '' }); }}
-                    className={`px-6 py-3 border rounded-xl text-sm font-medium transition-all ${
-                      isDark
+                    className={`px-6 py-3 border rounded-xl text-sm font-medium transition-all ${isDark
                         ? 'bg-white/5 border-white/10 text-white hover:bg-white/10'
                         : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
-                    }`}
+                      }`}
                   >
                     Send Another Message
                   </button>
