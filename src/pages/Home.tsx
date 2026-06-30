@@ -5,6 +5,7 @@ import {
   Sparkles, Brain, Code2, Layers, Zap, Star, ChevronDown
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import photo from '../assets/my-photo.png';
 
 const roles = [
   'AI Engineer',
@@ -15,9 +16,9 @@ const roles = [
 ];
 
 const stats = [
-  { value: '5+', label: 'Years Experience' },
-  { value: '40+', label: 'Projects Shipped' },
-  { value: '12+', label: 'AI Models Built' },
+  { value: '2+', label: 'Years Experience' },
+  { value: '5+', label: 'Projects Shipped' },
+  { value: '2+', label: 'AI Models Built' },
   { value: '99%', label: 'Client Satisfaction' },
 ];
 
@@ -34,7 +35,7 @@ const featuredProjects = [
   {
     icon: Brain,
     title: 'QueryMind: Natural Language to SQL Engine',
-    desc: 'Experimented with fine-tuning a LLaMA 3.2 3B model to explore Natural Language to SQL (NL2SQL) translation. Set up an asynchronous backend using FastAPI and Uvicorn to process user inputs and handle model inferences. Built an interactive web interface using Gradio and successfully deployed the application to HuggingFace Spaces for testing. Integrated OpenAI and Groq APIs to compare generated SQL queries and evaluate the model\'s performance.',
+    desc: 'Experimented with fine-tuning a LLaMA 3.2 3B model to explore Natural Language to SQL (NL2SQL) translation.',
     tags: ['Python', 'PyTorch', 'HuggingFace', 'FastAPI', 'Gradio'],
     gradient: 'from-indigo-500/20 to-violet-500/20',
     accent: 'border-indigo-500/30',
@@ -225,8 +226,8 @@ export default function Home() {
                   {/* Profile image */}
                   <div className={`absolute inset-[30px] rounded-full overflow-hidden border-2 border-indigo-500/40 shadow-2xl shadow-indigo-500/20 float-anim`}>
                     <img 
-                      src="/my-photo.png" 
-                      alt="Lakshitha Wijekoon" 
+                      src={photo} 
+                      alt="my photo" 
                       className="w-full h-full object-cover"
                     />
                   </div>
