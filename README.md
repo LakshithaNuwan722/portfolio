@@ -1,4 +1,4 @@
-# Lakshitha Nuwan's Portfolio
+# Lakshitha Wijekoon's Portfolio
 
 A modern, responsive, and highly interactive personal portfolio website showcasing my projects, skills, and experience in **Full-Stack Development**, **Mobile App Development**, and **AI/ML Engineering**.
 

@@ -6,7 +6,7 @@ import {
 import { useTheme } from '../context/ThemeContext';
 
 const timeline = [
-  {
+  /*{
     year: '2024 – Present',
     role: 'Senior AI Engineer',
     company: 'TechNova AI Labs',
@@ -19,19 +19,19 @@ const timeline = [
     company: 'DeepMind Startup Studio',
     desc: 'Built and trained transformer models for NLP tasks. Published 3 papers on efficient fine-tuning techniques.',
     type: 'work',
-  },
+  },*/
   {
-    year: '2021 – 2022',
+    year: '2025 – 2026',
     role: 'Full-Stack Developer',
     company: 'Freelance & Startups',
-    desc: 'Delivered 20+ web applications for startups using React, Node.js, and cloud infrastructure.',
+    //desc: 'Delivered 20+ web applications for startups using React, Node.js, and cloud infrastructure.',
     type: 'work',
   },
   {
-    year: '2017 – 2021',
-    role: 'BSc Computer Science (AI Specialisation)',
-    company: 'MIT — Massachusetts Institute of Technology',
-    desc: 'Graduated Summa Cum Laude. Thesis on "Efficient Transformer Architectures for Edge Deployment". GPA: 4.0/4.0',
+    year: '2024 – 2028',
+    role: 'BSc Information Technology (AI Specialisation)',
+    company: 'SLIIT — Sri Lanka Institute of Information Technology',
+    //desc: 'Graduated Summa Cum Laude. Thesis on "Efficient Transformer Architectures for Edge Deployment". GPA: 4.0/4.0',
     type: 'edu',
   },
 ];
@@ -82,7 +82,7 @@ export default function About() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <div className={`flex items-center gap-2 text-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                 <MapPin size={14} className="text-indigo-400" />
-                San Francisco, CA
+                Colombo, Sri Lanka
               </div>
               <div className={`flex items-center gap-2 text-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                 <Briefcase size={14} className="text-sky-400" />
@@ -236,7 +236,7 @@ export default function About() {
         </div>
 
         {/* Awards */}
-        <div>
+        {/*
           <div className="text-center mb-12">
             <p className="mono text-green-400 text-sm mb-3">// recognition</p>
             <h2 className={`text-3xl lg:text-4xl font-black ${isDark ? 'text-white' : 'text-slate-900'}`}>
@@ -263,7 +263,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+        */}
       </div>
     </div>
   );
